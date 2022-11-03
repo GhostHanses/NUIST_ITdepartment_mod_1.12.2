@@ -1,0 +1,16 @@
+{
+  "open_chest": {
+    "category": "block",
+    "subtitle": "study.subtitle.openChest",
+    "sounds": [ "study:open_chest_sound_file" ]
+  },
+  "epic_music": {
+    "category": "record",
+    "sounds": [
+      {
+        "name": "study:music/epic_music",
+        "stream": true
+      }
+    ]
+  }
+}
