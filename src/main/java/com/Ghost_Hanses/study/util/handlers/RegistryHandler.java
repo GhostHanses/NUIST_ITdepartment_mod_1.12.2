@@ -39,20 +39,10 @@ public class RegistryHandler {
     }
     @SubscribeEvent
     public static void registerRenderers(ModelRegistryEvent event) {
-        //event.registerEntityRenderer(EntityRegistry.GEO_EXAMPLE_ENTITY.get(), ExampleGeoRenderer::new);
-        RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, RendererBear::new);
-        //RenderingRegistry.registerEntityRenderingHandler(EntityRegistry.);
-
-    }
-
-    @SubscribeEvent
-    public static void bindEntityRenderer(ModelRegistryEvent event) {
-        // 自然也可以用 method reference。这里写成 lambda 只是为了更加明显。
-        //RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, manager -> new RendererBear(manager));
+        RenderHandler.registerEntityRenders();
     }
 
     public static void preInitRegistries(){
-
         EntityInit.registerEntities();
     }
 
@@ -67,7 +57,5 @@ public class RegistryHandler {
             }
         }
     }
-
-
 
 }

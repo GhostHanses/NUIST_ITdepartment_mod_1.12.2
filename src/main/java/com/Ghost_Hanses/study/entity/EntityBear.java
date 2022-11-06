@@ -12,7 +12,7 @@ import software.bernie.geckolib3.core.manager.AnimationFactory;
 
 public class EntityBear extends EntityLiving implements IAnimatable {
 
-
+    private AnimationFactory factory = new AnimationFactory(this);
     public EntityBear(World worldIn) {
         super(worldIn);
     }
@@ -33,7 +33,7 @@ public class EntityBear extends EntityLiving implements IAnimatable {
 
     @Override
     public AnimationFactory getFactory() {
-        return null;
+        return this.factory;
     }
 
 

@@ -12,15 +12,9 @@ import net.minecraftforge.fml.client.registry.RenderingRegistry;
 
 public class RenderHandler {
 
-    public static void registerEntityRenders(){
-
-//        RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, new IRenderFactory<EntityBear>()
-//        {
-////            @Override
-////            public Render<? super EntityBear> createRenderFor(RenderManager manager)
-////            {
-////                //return new RendererBear(manager) ;
-////            }
-//        });
+    public static void registerEntityRenders() {
+        //模型渲染文件注册
+        RenderingRegistry.registerEntityRenderingHandler(EntityBear.class, RendererBear::new);
     }
+
 }
